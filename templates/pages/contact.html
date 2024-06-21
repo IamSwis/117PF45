@@ -1,0 +1,40 @@
+{% extends 'base.html' %}
+
+{%block title%} Contact ME {% endblock title %}
+
+
+{% block content %}
+
+<div class="contact">
+
+    <h1>Call me for the JOB </h1>
+
+    <h3>If No answer leave a Voicemail</h3>
+
+    <form action="contact" method="post">
+
+        <div class="control">
+            <label> Your Email: </label>
+            {{ form.email}}
+        </div>
+
+        <div class="control">
+            <label> Your Name: </label>
+            {{ form.name}}
+        </div>
+
+        <div class="control">
+            <label> Your Message: </label>
+            <br>
+
+            <br />
+            {{ form.message}}
+        </div>
+
+        <button type="submit" class="btn btn-primary">Send Message </button>
+    </form>
+
+</div>
+
+
+{% endblock content %}

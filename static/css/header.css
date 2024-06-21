@@ -1,0 +1,41 @@
+header {
+    background-color: var(--surface-color);
+    height: 60px;
+    position: sticky;
+    top: 0px;
+    display: flex;
+    align-items: center; /* Ensures alignment of items within the header */
+}
+
+.logo {
+    width: 20%;
+}
+
+.nav-menu {
+    width: 80%;
+    height: 100%;
+    display: flex; /* Added to enable flex properties for child elements */
+    align-items: center; /* Centers the nav items vertically */
+    justify-content: flex-end; /* Aligns the nav items to the right */
+}
+
+.nav-menu a {
+    color: var(--neutral-color);
+    font-size: 1rem;
+    text-transform: uppercase;
+    margin: 2%;
+    padding: 1% 2%;
+    text-align: center; /* Centers text inside the link */
+}
+
+.nav-menu a:hover {
+    border-bottom: solid 2px var(--primary-color);
+}
+
+.nav-option {
+    width: 100%;
+    height: 100%;
+    display: flex; /* Added to enable flex properties for child elements */
+    align-items: center; /* Ensures alignment of items within nav-option */
+    justify-content: center; /* Centers nav-option content */
+}
