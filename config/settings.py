@@ -11,6 +11,11 @@ https://docs.djangoproject.com/en/5.0/ref/settings/
 """
 
 from pathlib import Path
+import os
+import certifi
+
+os.environ["SSL_CERT_FILE"] = certifi.where()
+
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -48,6 +53,7 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+    'django.middleware.csrf.CsrfViewMiddleware',
 ]
 
 ROOT_URLCONF = 'config.urls'
@@ -124,4 +130,10 @@ STATICFILES_DIRS = [str(BASE_DIR.joinpath("static"))]
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
-EMAIL_HOST_PASSWORD= "rscbyjzsrbdgrgvi"
+
+EMAIL_HOST = "smtp.gmail.com"
+EMAIL_POST = 587
+EMAIL_USE_TLS = True
+EMAIL_USE_SSL = False
+EMAIL_HOST_USER="inxunxa@gmail.com"
+EMAIL_HOST_PASSWORD="fbvhfmbosmhojwuc"
