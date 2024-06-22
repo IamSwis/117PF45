@@ -1,10 +1,57 @@
 {% extends 'base.html' %}
 
-{%block title%} About Me {% endblock title %}
 
+{%block title%} About Me {% endblock title %}
+{%load static%}
 
 {% block content %}
 
-<h1>Hello thsi aabout me</h1>
+<section class="about-section center-row">
+    <div class="about-image-container center-row">
+        <img src="{%static 'img/logo.png'%}" alt="About Image">
+    </div>
+
+    <div class="about-description-container center-column">
+        <h1> Cyber Engineer </h1>
+        <h2>Swis</h2>
+        <p>With a robust 10-year tenure in the military, I honed my skills in the IT department before transitioning
+            to the Cyber Division. My time in service was marked by a commitment to leveraging technology to enhance
+            security and operational efficiency. In the IT department, I managed and maintained critical systems,
+            ensuring their reliability and security. The move to the Cyber Division allowed me to delve deeper into
+            the intricacies of cybersecurity, where I was responsible for defending against and mitigating cyber
+            threats. This experience provided me with a solid foundation in both traditional IT and advanced
+            cybersecurity practices, equipping me with the knowledge to protect and secure information assets in
+            high-stakes environments. <br>
+
+            <br />
+            Currently I poses numerous certifications that solidify my ability to secure the networks. I have
+            expanded my technical proficiency to include Python, CSS, HTML, and Java. These skills
+            have enabled me to develop and deploy automated tools that enhance cybersecurity defenses. By utilizing
+            Python, I can create scripts to automate various tasks, streamline processes, and improve response times
+            during cyber incidents. My expertise in web technologies such as CSS and HTML allows me to build
+            intuitive interfaces and robust applications. This combination of military discipline and technical
+            acumen positions me uniquely to tackle complex cybersecurity challenges, providing innovative solutions
+            to safeguard critical infrastructures.
+        </p>
+        <div class="label-container center-column">
+            <h2>Skills</h2>
+
+
+            <div class=" label-container center-row">
+
+                <label class="label-text">Java</label>
+                <label class="label-text">Python</label>
+                <label class="label-text">HTML</label>
+                <label class="label-text">CSS</label>
+                <label class="label-text"></label>
+                <label class="label-text"></label>
+                <label class="label-text">GCIH</label>
+                <label class="label-text">GSEC</label>
+                <label class="label-text">CEH</label>
+                <label class="label-text">ADS </label>
+            </div>
+        </div>
+    </div>
+</section>
 
 {% endblock content %}
