@@ -6,6 +6,13 @@
 
 {% block content %}
 <section class="projects-section">
+
+    {% if user.is_authenticated %}
+    <a class="btn-primary" href="">
+        Add Projects
+    </a>
+    {% endif %}
+
     <h2>Projects</h2>
 
     <div class="projects-list">
